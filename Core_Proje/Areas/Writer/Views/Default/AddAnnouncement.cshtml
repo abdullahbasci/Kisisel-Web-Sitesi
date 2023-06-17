@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "AddAnnouncement";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Default form</h4>
+            <p class="card-description">
+                Basic form layout
+            </p>
+            @using (Html.BeginForm("AddAnnouncement", "Default", FormMethod.Post))
+            {
+            <form class="forms-sample" method="post">
+                        <div class="form-group">
+                        <label>Başlık</label>
+                        <input type="text" class="form-control" name="Title">
+                    </div>
+                        <div class="form-group">
+                            <label>Tarih</label>
+                            <input type="text" class="form-control" name="Date">
+                        </div>
+                        <div class="form-group">
+                            <label>Status</label>
+                        <input type="text" class="form-control" name="Status">
+                        </div>
+                    <div class="form-group">
+                        <label>Açıklama</label>
+                        <textarea class="form-control" name="Content" rows="6"></textarea>
+                    </div>
+               
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">İptal</button>
+            </form>
+            }
+        </div>
+    </div>
+</div>
